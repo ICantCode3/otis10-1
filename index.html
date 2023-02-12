@@ -2,14 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>API Fetch Example</title>
+    <title>Elevator Maintenance Info</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div>
-      <input type="file" id="fileInput" />
-      <button onclick="fetchAPI()">Fetch API Data</button>
+    <h1>Elevator Maintenance Info</h1>
+    <div id="file-input-container">
+      <label for="file-input">Select an Excel File:</label>
+      <input type="file" id="file-input" accept=".xlsx">
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <table id="maintenance-table">
+      <thead>
+        <tr>
+          <th>Elevator ID</th>
+          <th>Maintenance Type</th>
+          <th>Maintenance Date</th>
+        </tr>
+      </thead>
+      <tbody id="maintenance-body"></tbody>
+    </table>
+    <script src="script.js"></script>
   </body>
 </html>
